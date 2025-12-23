@@ -32,7 +32,6 @@ vector<int> merge_sort(int low, int high) {
 int main() {
     int n;
     cin >> n;
-    vector<int> a(n);
     for(int i = 0; i < n; i++) cin >> a[i];
     
     a = merge_sort(0, n - 1);
