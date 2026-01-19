@@ -23,10 +23,10 @@ int main() {
         cin >> edges[i].u >> edges[i].v >> edges[i].w;
     }
 
-    vector<ll> dist(n + 1, INF);
-
     int src;
     cin >> src;
+    
+    vector<ll> dist(n + 1, INF);
     dist[src] = 0;
 
     // Relaxing n - 1 times
