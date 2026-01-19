@@ -31,7 +31,7 @@ int main() {
 
     // Relaxing n - 1 times
     for(int i = 1; i < n - 1; i++) {
-        for(auto e: edges) {
+        for(auto e : edges) {
             if(dist[e.u] != INF && dist[e.u] + e.w < dist[e.v]) {
                 dist[e.v] = dist[e.u] + e.w;
             }
@@ -40,7 +40,7 @@ int main() {
 
     // Negative cycle cheaking
     bool neg_cycle = false;
-    for(auto e: edges) {
+    for(auto e : edges) {
         if(dist[e.u] != INF && dist[e.u] + e.w < dist[e.v]) {
             dist[e.v] = dist[e.u] + e.w;
             neg_cycle = true;
